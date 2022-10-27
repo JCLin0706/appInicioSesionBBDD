@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Inicio de Sesión</title>
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700;1,800&display=swap"
+          rel="stylesheet">
+
+     <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+     <header class="cabecera">
+          <h3 class="titulo">Zoo de Madrid</h3>
+          <nav class="navegacion">
+               <p class="enlace" onclick="document.getElementById('modal-registro').style.display='block'">Registrarse
+               </p>
+               <p class="enlace" onclick="document.getElementById('modal-inicio-sesion').style.display='block'">Login
+               </p>
+          </nav>
+     </header>
+     <div class="contenido">
+          <div class="contenedor-titulo">
+               <h1 class="titulo">El Zoo de Madrid</h1>
+          </div>
+          <p class="precio">Entradas desde 15€</p>
+     </div>
+
+     <!-- Modal Registro -->
+     <div id="modal-registro" class="modal">
+
+          <!-- Modal content -->
+          <div class="contenido-modal">
+               <span class="boton-cerrar" onclick="document.getElementById('modal-registro').style.display='none'">&times;</span>
+               <h3 class="titulo-secundario">Registro</h3>
+
+               <form class="formulario" action="app/registro.py" method="get">
+
+                    <div class="campos-formulario">
+                         <div class="campo-formulario">
+                              <label class="nombre-campo" for="nombre">Nombre</label>
+                              <input class="introduccion-datos" type="text" name="nombre" value="" placeholder="Nombre de Usuario">
+                         </div>
+     
+                         <div class="campo-formulario">
+                              <label class="nombre-campo" for="correo">Correo Electrónico</label>
+                              <input class="introduccion-datos" type="text" name="correo" value="" placeholder="Correo Electrónico">
+                         </div>
+     
+                         <div class="campo-formulario">
+                              <label class="nombre-campo" for="contrasena">Contraseña</label>
+                              <input class="introduccion-datos" type="password" name="contrasena" value="" placeholder="Contraseña">
+                         </div>
+                    </div>
+
+                    <button class="boton-enviar" type="submit">Enviar</button>
+                    
+               </form>
+          </div>
+
+     </div>
+
+     <!-- Modal Inicio Sesion -->
+     <div id="modal-inicio-sesion" class="modal">
+
+          <!-- Modal content -->
+          <div class="contenido-modal">
+               <span class="boton-cerrar" onclick="document.getElementById('modal-inicio-sesion').style.display='none'">&times;</span>
+               <h3 class="titulo-secundario">Inicio de Sesion</h3>
+
+               <form class="formulario" action="app/login.py" method="get">
+
+                    <div class="campos-formulario">
+                         <div class="campo-formulario">
+                              <label class="nombre-campo" for="nombre">Nombre</label>
+                              <input class="introduccion-datos" type="text" name="nombre" value="" placeholder="Nombre de Usuario">
+                         </div>
+     
+                         <div class="campo-formulario">
+                              <label class="nombre-campo" for="contrasena">Contraseña</label>
+                              <input class="introduccion-datos" type="password" name="contrasena" value="" placeholder="Contraseña">
+                         </div>
+                    </div>
+
+                    <button class="boton-enviar" type="submit">Enviar</button>
+                    
+               </form>
+          </div>
+
+     </div>
+
+
+</body>
+
+</html>
